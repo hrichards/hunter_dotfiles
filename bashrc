@@ -85,5 +85,8 @@ alias python_summary='grep -E "class.*\(.*\):|def.*\(.*\):"'
 export CLICOLOR=1
 
 # Installed MacVim through Homebrew.  These commands are required to make it work:
-alias vim='mvim -v'
-alias vi='mvim -v'
+
+if [ $OSTYPE == "darwin10.0" ]; then
+    alias vim='mvim -v'
+    alias vi='mvim -v'
+fi
