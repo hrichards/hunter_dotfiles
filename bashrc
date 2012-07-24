@@ -1,9 +1,16 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 export PATH=/usr/local/lib/node_modules:$PATH
-export PATH=/usr/local/Cellar/ruby/1.9.3-p125/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+
+if [ $OSTYPE == "darwin10.0" ]; then
+    export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+    export PATH=/usr/local/Cellar/ruby/1.9.3-p125/bin:$PATH
+    if [ -f `brew --prefix`/etc/bash_completion ]; then
+        . `brew --prefix`/etc/bash_completion
+    fi
+fi
+
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 
 #See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
@@ -12,9 +19,6 @@ PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 # enable homebrew bash completion.  must install homebrew's version of
 # bash completion using "brew install bash-completion" first:
 
-#if [ -f `brew --prefix`/etc/bash_completion ]; then
-#  . `brew --prefix`/etc/bash_completion
-#fi
 
 # ---------> VERY IMPORTANT: Bash eternal history <---------
 #
