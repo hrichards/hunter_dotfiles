@@ -175,36 +175,6 @@ au FileType make     set noexpandtab
 au FileType tex set formatlistpat=^\\s*\\\\\\(end\\\\|item\\)\\>
 au FileType tex set formatoptions+=n
 
-" ==== ERROR CHECKING ====
-" Bind F4 to check errors when viewing python files
-au BufRead,BufNewFile * if &ft == 'python' | nmap <F4> :%call PyRangedMake()<CR> | endif
-au BufRead,BufNewFile * if &ft == 'python' | nmap  vmap <F4> :call PyRangedMake()<CR> | endif
-
-" Turn off line numbering for the error buffer
-au BufReadPost quickfix setlocal nonumber
-
-" F1: close the error window
-nmap <F1> :cclose<CR>:setlocal cursorline<CR>
-imap <F1> <C-o>:cclose<CR><C-o>:setlocal cursorline<CR>
-
-" F2/F3: move between errors
-nmap <F2> :cprev<CR>
-nmap <F3> :cnext<CR>
-imap <F2> <C-o>:cprev<CR>
-imap <F3> <C-o>:cnext<CR
-
-" Hack to make 'make' work with ranges, so that we can
-" pass the ranges to pylint_range_filter
-function! PyRangedMake() range
-    setlocal makeprg=pylint\ --include-ids=y\ --reports=n\ %\ \\\|\ pylint_range_filter
-    setlocal errorformat=\ \\*%t%n:\ \\*%l:\ \\*%m
-    exec "make " . a:firstline . " " . a:lastline
-    cclose
-    copen
-    wincmd p
-endfunction
-
-
 " ==== GENERAL MAPS, ABBREVS, AND SHORTCUTS ====
 " Remove all trailing whitespace with CTRL+G
 nmap <C-g> :%s/\s\+$//g<CR>
@@ -229,3 +199,25 @@ nnoremap <leader>p gqap
 set foldmethod=syntax   "fold based on syntax highlight interp of code
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
+
+" Codequality Integration from DevWiki
+" ====================================
+" Relies on Jenan Wise's codequality being installed
+
+set makeprg=codequality\ %
+" Turn off line numbering for the error buffer
+au BufReadPost quickfix setlocal nonumber
+
+" F4: run the make program
+nmap <F4> :make<CR>
+vmap <F4> <C-o>:make<CR>
+
+" F1: close the error window
+nmap <F1> :cclose<CR>
+imap <F1> <C-o>:cclose<CR>
+
+" F2/F3: move between errors
+nmap <F2> :cprev<CR>
+nmap <F3> :cnext<CR>
+imap <F2> <C-o>:cprev<CR>
+imap <F3> <C-o>:cnext<CR>
