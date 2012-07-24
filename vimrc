@@ -1,5 +1,6 @@
 " ===== BASIC OPTIONS =====
 runtime macros/matchit.vim
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 set autoindent
 set backspace=eol,indent,start
 set backupskip=/tmp/*,/private/tmp/*"
@@ -225,6 +226,6 @@ nnoremap <leader>p gqap
 
 " ================ Folds ============================
 
-set foldmethod=indent   "fold based on indent
+set foldmethod=syntax   "fold based on syntax highlight interp of code
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
