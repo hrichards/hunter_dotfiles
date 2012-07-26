@@ -57,7 +57,7 @@ let g:tagbar_type_tex = {
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
-syntax on
+syntax enable
 
 " Turn on solarized colorscheme
 set background=light

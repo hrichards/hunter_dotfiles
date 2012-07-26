@@ -94,3 +94,5 @@ if [ $OSTYPE == "darwin10.0" ]; then
     alias vim='mvim -v'
     alias vi='mvim -v'
 fi
+
+alias tmux="TERM=screen-256color-bce tmux"
