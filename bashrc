@@ -2,6 +2,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/lib/node_modules:$PATH
 export PATH=/usr/local/sbin:$PATH
+export PATH=/Users/hunter/macvim/src/MacVim:$PATH
 
 if [ $OSTYPE == "darwin10.0" ]; then
     export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
@@ -71,6 +72,7 @@ alias treeacl='tree -A -C -L 2'
 alias coldiff='diff --strip-trailing-cr -W200 -wbBy'
 alias less='less -R'
 alias grep='grep --color=always'
+alias tree='tree -C'
 
 # Better defaults for common commands
 alias emacs='emacs -nw'

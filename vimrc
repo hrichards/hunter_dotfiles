@@ -169,9 +169,14 @@ nmap <Leader>t :FuzzyFinderTextMate<CR>
 " ==== FILETYPE-SPECIFIC =====
 let python_highlight_space_errors=1
 au FileType python set omnifunc=pythoncomplete#Complete
-au FileType make     set noexpandtab
+au FileType python set textwidth=79
+au FileType make   set noexpandtab
+au FileType tex    set makeprg=pdflatex\ -interaction\ nonstopmode\ %
 
-" Make gq} not mangle \item lists in latex
+let g:tex_flavor='latex'
+au FileType tex set sw=2
+
+" Make gq not mangle \item lists in latex
 au FileType tex set formatlistpat=^\\s*\\\\\\(end\\\\|item\\)\\>
 au FileType tex set formatoptions+=n
 
@@ -204,7 +209,7 @@ set nofoldenable        "dont fold by default
 " ====================================
 " Relies on Jenan Wise's codequality being installed
 
-set makeprg=codequality\ %
+au FileType python set makeprg=codequality\ %
 " Turn off line numbering for the error buffer
 au BufReadPost quickfix setlocal nonumber
 
@@ -221,3 +226,5 @@ nmap <F2> :cprev<CR>
 nmap <F3> :cnext<CR>
 imap <F2> <C-o>:cprev<CR>
 imap <F3> <C-o>:cnext<CR>
+
+let g:Imap_UsePlaceHolders = 0
