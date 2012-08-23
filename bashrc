@@ -2,11 +2,11 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/lib/node_modules:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=/Users/hunter/macvim/src/MacVim:$PATH
 
 if [ $OSTYPE == "darwin10.0" ]; then
     export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
     export PATH=/usr/local/Cellar/ruby/1.9.3-p125/bin:$PATH
+    export PATH=/Users/hunter/macvim/src/MacVim:$PATH
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
     fi
@@ -95,6 +95,6 @@ export CLICOLOR=1
 if [ $OSTYPE == "darwin10.0" ]; then
     alias vim='mvim -v'
     alias vi='mvim -v'
+    alias tmux="TERM=screen-256color-bce tmux"
 fi
 
-alias tmux="TERM=screen-256color-bce tmux"
