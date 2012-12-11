@@ -1,16 +1,10 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
-export PATH=/usr/local/lib/node_modules:$PATH
+export PATH=/usr/local/share/npm/bin/:$PATH
 export PATH=/usr/local/sbin:$PATH
-
-if [ $OSTYPE == "darwin10.0" ]; then
-    export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-    export PATH=/usr/local/Cellar/ruby/1.9.3-p125/bin:$PATH
-    export PATH=/Users/hunter/macvim/src/MacVim:$PATH
-    if [ -f `brew --prefix`/etc/bash_completion ]; then
-        . `brew --prefix`/etc/bash_completion
-    fi
-fi
+export PATH=$HOME/bin:$PATH
+export PATH=/Users/hunter/macvim/src/MacVim:$PATH
+export PATH=$HOME/Library/Haskell/bin:$PATH
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 
@@ -90,11 +84,4 @@ alias python_summary='grep -E "class.*\(.*\):|def.*\(.*\):"'
 # Colorize the Terminal
 export CLICOLOR=1
 
-# Installed MacVim through Homebrew.  These commands are required to make it work:
-
-if [ $OSTYPE == "darwin10.0" ]; then
-    alias vim='mvim -v'
-    alias vi='mvim -v'
-    alias tmux="TERM=screen-256color-bce tmux"
-fi
-
+alias tmux="TERM=screen-256color-bce tmux"

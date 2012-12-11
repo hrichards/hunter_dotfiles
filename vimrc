@@ -63,7 +63,6 @@ syntax enable
 set background=light
 colorscheme solarized
 
-
 " Pressing space after a search will clear all highlighting
 nmap <SPACE> <SPACE>:noh<CR>
 
@@ -141,31 +140,6 @@ endif
 " jump to last position in a file when it is opened
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
-" ===== PLUGIN SETTINGS =====
-" TagList
-nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Show_One_File=1
-let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_WinWidth=45
-let Tlist_Inc_WinWith=0
-
-" bufexplorer
-let g:bufExplorerShowRelativePath=1
-let g:bufExplorerSortBy='fullpath'
-let g:bufExplorerSplitVertical=1
-
-" NERDCommenter
-let NERDShutUp=1
-
-" NERDTree
-let NERDTreeIgnore=['\~$', '\.pyc$']
-nnoremap <silent> <F7> :NERDTreeToggle<CR>
-
-" FuzzyFinderTextmate
-" http://github.com/jamis/fuzzyfinder_textmate
-nmap <Leader>t :FuzzyFinderTextMate<CR>
-
-
 " ==== FILETYPE-SPECIFIC =====
 let python_highlight_space_errors=1
 au FileType python set omnifunc=pythoncomplete#Complete
@@ -173,32 +147,21 @@ au FileType python set textwidth=79
 au FileType make   set noexpandtab
 au FileType tex    set makeprg=pdflatex\ -interaction\ nonstopmode\ %
 au FileType markdown    set equalprg=pandoc\ -t\ markdown
+" au BufNewFile,BufRead *.md set filetype=markdown
 
 let g:tex_flavor='latex'
-au FileType tex set sw=2
 
 " Make gq not mangle \item lists in latex
-au FileType tex set formatlistpat=^\\s*\\\\\\(end\\\\|item\\)\\>
+au FileType tex set formatlistpat=^\\s*\\\\\\(begin\\\\|end\\\\|item\\)\\>
 au FileType tex set formatoptions+=n
 
 " ==== GENERAL MAPS, ABBREVS, AND SHORTCUTS ====
 " Remove all trailing whitespace with CTRL+G
 nmap <C-g> :%s/\s\+$//g<CR>
 
-iabbrev =>> →
-iabbrev <<= ←
-
-" Putting this line in a python file will start an IPython debugger
-" when it is executed. Much better than pdb.set_trace()
-iab ipdb# import IPython.ipapi; IPython.ipapi.make_session(); from IPython.Debugger import Tracer; Tracer()(); # XXX
-
-
 " ==== SPELL CHECKING ====
 map <F5> :setlocal spell! spelllang=en_us<CR>
 imap <F5> <C-o>:setlocal spell! spelllang=en_us<CR>
-
-" Easier key combo than others for formatting paragraph
-nnoremap <leader>p gqap
 
 " ================ Folds ============================
 

@@ -7,18 +7,20 @@ deleting leading and adding trailing, to be specific.
 
 This script does the following:
 
-1. It takes in piped input, remembering how much whitespace was at the beginning
-and end of the section.
+1. It takes in piped input, remembering how much whitespace was at the
+beginning and end of the section.
 2. Then it passes what remains to a specific call to pandoc
-3. It removes all whitespace that pandoc adds at the beginning and ending of the
-section.
+3. It removes all whitespace that pandoc adds at the beginning and ending of
+the section.
 4. Finally, it adds back the whitespace at the beginning and end of the block
 and writes it out to a pipe so that it can be used inside vim.
 
 """
 
 import sys
-from subprocess import Popen, PIPE
+from subprocess import Popen
+from subprocess import PIPE
+
 
 def count_and_strip_whitespace(lines):
     leading_index = []
@@ -30,7 +32,7 @@ def count_and_strip_whitespace(lines):
         else:
             break
 
-    for i in range(len(lines)-1, 0, -1):
+    for i in range(len(lines) - 1, 0, -1):
         if lines[i] == '\n':
             trailing_index.append(i)
         else:
@@ -40,10 +42,12 @@ def count_and_strip_whitespace(lines):
     map(lines.pop, remove_indexes)
     return len(leading_index), len(trailing_index), lines
 
+
 def process_with_pandoc(lines):
     pipe_to_pandoc = Popen(["pandoc", "-t", "markdown"], stdin=PIPE,
             stdout=PIPE)
     return pipe_to_pandoc.communicate(input=buffer(''.join(lines)))[0]
+
 
 def re_apply_whitespace(leading, trailing, lines):
     return_lines = []
@@ -53,6 +57,7 @@ def re_apply_whitespace(leading, trailing, lines):
     for i in range(trailing):
         return_lines.append('\n')
     return ''.join(return_lines)
+
 
 def main(args):
     with sys.stdin as s:
