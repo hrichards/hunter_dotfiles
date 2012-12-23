@@ -27,7 +27,6 @@ set softtabstop=4
 set splitbelow
 set splitright
 set tabstop=4
-set textwidth=80
 set viminfo+=%
 set wildmenu
 set wildmode=longest:full,list:full
@@ -147,7 +146,6 @@ au FileType python set textwidth=79
 au FileType make   set noexpandtab
 au FileType tex    set makeprg=pdflatex\ -interaction\ nonstopmode\ %
 au FileType markdown    set equalprg=pandoc\ -t\ markdown
-" au BufNewFile,BufRead *.md set filetype=markdown
 
 let g:tex_flavor='latex'
 
