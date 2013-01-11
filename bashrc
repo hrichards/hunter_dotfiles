@@ -5,6 +5,9 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=/Users/hunter/macvim/src/MacVim:$PATH
 export PATH=$HOME/Library/Haskell/bin:$PATH
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 
