@@ -11,6 +11,8 @@ export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 
+export TESSDATA_PREFIX=$HOME/tesseract-ocr-read-only/
+
 #See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
 PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 
