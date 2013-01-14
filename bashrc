@@ -47,7 +47,9 @@ PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 # balajis@counsyl.com
 #
 # It is adapted from: http://www.debian-administration.org/articles/543.
-PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo -e $$\\t$USER\\t$HOSTNAME\\tscreen $WINDOW\\t`date +%D%t%T%t%Y%t%s`\\t$PWD"$(history 1)" >> ~/.bash_eternal_history'
+# PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo -e $$\\t$USER\\t$HOSTNAME\\tscreen $WINDOW\\t`date +%D%t%T%t%Y%t%s`\\t$PWD"$(history 1)" >> ~/.bash_eternal_history'
+export HISTTIMEFORMAT="%s "
+PROMPT_COMMAND='echo $$ $USER "$(history 1)" >> ~/.bash_eternal_history'
 
 # Safety
 alias rm="rm -i"
