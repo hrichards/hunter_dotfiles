@@ -3,7 +3,6 @@ export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/share/npm/bin/:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
-export PATH=/Users/hunter/macvim/src/MacVim:$PATH
 export PATH=$HOME/Library/Haskell/bin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
