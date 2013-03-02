@@ -1,1 +1,8 @@
-tmux.conf
+# Mac-specific config options
+
+# run `brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste`, and
+# then put the following line in your .tmux.conf:
+set-option -g default-command "reattach-to-user-namespace -l bash"
+
+# Now, load tmux settings common to all systems:
+source-file $HOME/hunter_dotfiles/tmux.conf.common

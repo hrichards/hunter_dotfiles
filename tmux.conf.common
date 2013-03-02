@@ -1,0 +1,44 @@
+set -g default-terminal "xterm-256color"
+
+# C-b is not acceptable -- Vim uses it
+set-option -g prefix C-t
+bind-key C-t last-window
+
+# Start numbering at 1
+set -g base-index 1
+
+# Allows for faster key repetition
+set -s escape-time 0
+
+# Rather than constraining window size to the maximum size of any client
+# connected to the *session*, constrain window size to the maximum size of any
+# client connected to *that window*. Much more reasonable.
+setw -g aggressive-resize on
+
+# Allows us to use C-a a <command> to send commands to a TMUX session inside
+# another TMUX session
+bind-key a send-prefix
+
+# Highlight active window in window bar
+set-window-option -g window-status-current-bg blue
+set-window-option -g window-status-current-fg white
+set-option -g status-bg blue
+set-option -g status-fg black
+
+# Better shortcuts for joining panes
+bind-key h command-prompt -p "create horiz pane from:"  "join-pane -h -s ':%%'"
+bind-key v command-prompt -p "create vert pane from:"  "join-pane -v -s ':%%'"
+
+# Set clock to 12-hr mode
+set-window-option -g clock-mode-style 12
+
+# Set copy mode keybindings to vim mode
+setw -g mode-keys vi
+
+# I don't like the new setting that copies your CWD into new windows
+# Make new windows start out in $HOME
+set-option -g default-path $HOME
+
+# I keep pressing C-t C-o instead of C-t o, and end up swapping instead of
+# switching panes.  This maps both keystrokes to the same action.
+bind-key C-o select-pane -t :.+
