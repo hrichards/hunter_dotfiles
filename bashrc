@@ -1,10 +1,12 @@
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
-export PATH=/usr/local/share/npm/bin/:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/Library/Haskell/bin:$PATH
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+
+export GEM_HOME=$(brew --prefix)
 
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
