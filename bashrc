@@ -91,3 +91,5 @@ alias python_summary='grep -E "class.*\(.*\):|def.*\(.*\):"'
 export CLICOLOR=1
 
 alias tmux="TERM=screen-256color-bce tmux"
+
+source $HOME/hunter_dotfiles/for_virtualenv.sh
