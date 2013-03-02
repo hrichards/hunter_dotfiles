@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
@@ -17,10 +19,7 @@ export TESSDATA_PREFIX=$HOME/tesseract-ocr-read-only/
 #See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
 PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 
-# enable homebrew bash completion.  must install homebrew's version of
-# bash completion using "brew install bash-completion" first:
-
-
+#
 # ---------> VERY IMPORTANT: Bash eternal history <---------
 #
 # This incredibly important snippet allows infinite recording of
@@ -58,28 +57,17 @@ alias mv="mv -i"
 alias cp="cp -i"
 set -o noclobber
 
-# Listing, directories, and motion
+# Listing and searching: mostly turning on colors
 alias ll="ls -alrtF --color=auto"
 alias la="ls -A"
 alias l="ls -CF"
-alias dir='ls --color=auto --format=vertical'
-alias vdir='ls --color=auto --format=long'
-alias m='less'
 alias ..='cd ..'
 alias ...='cd ..;cd ..'
-alias md='mkdir'
-alias cl='clear'
 alias du='du -ch --max-depth=1'
-alias treeacl='tree -A -C -L 2'
-alias coldiff='diff --strip-trailing-cr -W200 -wbBy'
 alias less='less -R'
 alias grep='grep --color=always'
 alias tree='tree -C'
-
-# Better defaults for common commands
-alias emacs='emacs -nw'
 alias lessrs='less -R -S'
-alias ec='emacsclient -n'
 
 # Git abbreviations
 alias gts="git status"
@@ -87,11 +75,5 @@ alias gts="git status"
 # grep functions
 function gbeh() { grep "$@" ~/.bash_eternal_history ;}
 alias python_summary='grep -E "class.*\(.*\):|def.*\(.*\):"'
-
-# Turn on TerminalColours SIMBL package
-# Colorize the Terminal
-export CLICOLOR=1
-
-alias tmux="TERM=screen-256color-bce tmux"
 
 source $HOME/hunter_dotfiles/for_virtualenv.sh
