@@ -1,4 +1,4 @@
-if [ $OSTYPE == "darwin10.0" ]; then
+if [[ $OSTYPE =~ darwin.* ]]; then
     export PATH=/usr/local/Cellar/ruby/1.9.3-p125/bin:$PATH
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
