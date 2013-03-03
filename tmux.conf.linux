@@ -1,4 +1,4 @@
 # Linux-specific config options:
 
 # Now, load tmux settings common to all systems:
-bind r source-file tmux.conf.common
+source-file $HOME/hunter_dotfiles/tmux.conf.common
