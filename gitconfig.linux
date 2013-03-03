@@ -1,0 +1,32 @@
+[user]
+    name = Hunter Richards
+    email = hunter@counsyl.com
+[core]
+    quotepath = false
+[color]
+    ui = true
+[init]
+    templatedir = ~/.git_template
+[alias]
+    st = status
+    cm = commit
+    br = branch
+    co = checkout
+    df = diff
+    dc = diff --cached
+    lg = log --pretty=oneline --abbrev-commit
+    lgg = log --graph --decorate --pretty=oneline --abbrev-commit
+    lgga = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lgc = log origin/master..HEAD
+    lgm = log HEAD..origin/master
+    ls = ls-files
+[diff]
+    tool = vimdiff
+[core]
+  packedGitLimit = 128m
+  packedGitWindowSize = 128m
+
+[pack]
+  deltaCacheSize = 128m
+  packSizeLimit = 128m
+  windowMemory = 128m
