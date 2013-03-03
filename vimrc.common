@@ -1,6 +1,9 @@
-" ===== BASIC OPTIONS =====
-runtime macros/matchit.vim
+" Required to use the 'pathogen' vim plugin manager
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+execute pathogen#helptags()
+
+" ===== BASIC OPTIONS =====
 set autoindent
 set backspace=eol,indent,start
 set backupskip=/tmp/*,/private/tmp/*"
@@ -32,10 +35,6 @@ set wildmenu
 set wildmode=longest:full,list:full
 set wrap
 set incsearch
-
-" Required to use the 'pathogen' vim plugin manager
-call pathogen#infect()
-call pathogen#helptags()
 
 " Tagbar Options
 let g:tagbar_usearrows = 1

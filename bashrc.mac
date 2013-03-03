@@ -1,0 +1,7 @@
+export GEM_HOME=$(brew --prefix)
+
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+
+source $HOME/hunter_dotfiles/bashrc.common
