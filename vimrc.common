@@ -50,7 +50,13 @@ let g:tagbar_type_tex = {
             \ ],
             \ 'sort'    : 0,
             \ }
-
+let g:tagbar_type_markdown = {
+            \ 'ctagstype' : 'markdown',
+            \ 'kinds' : [
+            \ 'h:headings'
+            \ ],
+            \ 'sort' : 0,
+            \ }
 " XML Folding
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
