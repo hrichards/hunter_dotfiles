@@ -39,3 +39,6 @@ set-option -g default-path $HOME
 # I keep pressing C-t C-o instead of C-t o, and end up swapping instead of
 # switching panes.  This maps both keystrokes to the same action.
 bind-key C-o select-pane -t :.+
+
+# Set history size to a large number
+set -g history-limit 5000
