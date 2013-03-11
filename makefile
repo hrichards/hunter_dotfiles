@@ -19,3 +19,4 @@ common:
 	ln -sf ~/hunter_dotfiles/ctags ~/.ctags
 	rm -f ~/.vim
 	ln -sf ~/hunter_dotfiles/vim ~/.vim
+	git submodule init && git submodule update
