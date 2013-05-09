@@ -9,7 +9,7 @@ alias python=${PYTHON}
 export PYTHON=${PYTHON}
 export WORKON_HOME="$HOME/.virtualenvs"
 export VIRTUALENVWRAPPER_TMPDIR="$WORKON_HOME/tmp"
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/$PYTHON
+export VIRTUALENVWRAPPER_PYTHON=`which python`
 source virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true 
