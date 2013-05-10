@@ -1,0 +1,2 @@
+# Avoid accidental changes to submodules
+git submodule update

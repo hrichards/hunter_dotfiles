@@ -16,6 +16,7 @@ mac: common
 	ln -sf ~/hunter_dotfiles/gitconfig.mac ~/.gitconfig
 
 common:
+	ln -sf ~/hunter_dotfiles/git_template ~/.git_template
 	ln -sf ~/hunter_dotfiles/ctags ~/.ctags
 	rm -f ~/.vim
 	ln -sf ~/hunter_dotfiles/vim ~/.vim
