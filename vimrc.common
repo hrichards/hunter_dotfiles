@@ -193,3 +193,22 @@ imap <F2> <C-o>:cprev<CR>
 imap <F3> <C-o>:cnext<CR>
 
 let g:Imap_UsePlaceHolders = 0
+
+
+" ====== Coffeescript Ctags support =====
+
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+endif
