@@ -20,6 +20,7 @@
     lgc = log origin/master..HEAD
     lgm = log HEAD..origin/master
     ls = ls-files
+    lggo = !git log --graph --decorate --pretty=oneline --abbrev-commit $(git merge-base origin/master HEAD)..
 [diff]
     tool = vimdiff
 [push]
