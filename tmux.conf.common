@@ -32,10 +32,6 @@ set-window-option -g clock-mode-style 12
 # Set copy mode keybindings to vim mode
 setw -g mode-keys vi
 
-# I don't like the new setting that copies your CWD into new windows
-# Make new windows start out in $HOME
-set-option -g default-path $HOME
-
 # I keep pressing C-t C-o instead of C-t o, and end up swapping instead of
 # switching panes.  This maps both keystrokes to the same action.
 bind-key C-o select-pane -t :.+
