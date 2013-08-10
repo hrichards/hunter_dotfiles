@@ -47,8 +47,21 @@ else
 fi
 }
 
+function parse_git_stash {
+    if git stash list >/dev/null 2>&1
+    then
+        local STASH=`git stash list`
+        if [[ "$STASH" != "" ]]
+        then
+            echo -e "\033[00;34m[Δ]"
+        fi
+    else
+        echo ""
+    fi
+}
+
 #See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
-PS1='\[\033[00;34m\][\u@\h:\w]\[$(git_color)\]$(parse_git_branch)\[\033[00m\]'
+PS1='\[\033[00;34m\][\u@\h:\w]\[$(git_color)\]$(parse_git_branch)$(parse_git_stash)\[\033[00m\]'
 
 #
 # ---------> VERY IMPORTANT: Bash eternal history <---------
