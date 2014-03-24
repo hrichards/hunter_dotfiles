@@ -18,7 +18,7 @@
 	url = git://github.com/tpope/vim-pathogen.git
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
-    url = git://github.com/hrichards/vim-markdown.git
+    url = git://github.com/tpope/vim-markdown.git
 [submodule "vim/bundle/django.vim"]
 	path = vim/bundle/django.vim
 	url = git://github.com/vim-scripts/django.vim.git
