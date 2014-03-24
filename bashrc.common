@@ -1,16 +1,11 @@
 export TERM=xterm-256color
 
 export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
-export PATH=$HOME/Library/Haskell/bin:$PATH
-
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
-
-export TESSDATA_PREFIX=$HOME/tesseract-ocr-read-only/
 
 # Git status color from:
 # http://amatsukawa.com/git-branch-command-line.html
@@ -118,6 +113,7 @@ alias gts="git status"
 
 # grep functions
 function gbeh() { grep "$@" ~/.bash_eternal_history ;}
-alias python_summary='grep -E "class.*\(.*\):|def.*\(.*\):"'
 
-source $HOME/hunter_dotfiles/for_virtualenv.sh
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh

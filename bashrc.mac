@@ -2,13 +2,8 @@ export GEM_HOME=$(brew --prefix)
 
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
-# These paths work when you've gone through the seq_pipeline_annex setup
-# instructions at https://github.counsyl.com/dev/seq_pipeline_annex#setup
-export PATH=/data/seq/seq_pipeline_annex/tools/Darwin/bedtools/bin:$PATH
-export PATH=/data/seq/seq_pipeline_annex/tools/Darwin/samtools:$PATH
-export PATH=/data/seq/seq_pipeline_annex/tools/common/IGV_2.0.5:$PATH
-
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
+alias vim='vim -w ~/.vimlog "$@"'
 
 source $HOME/hunter_dotfiles/bashrc.common

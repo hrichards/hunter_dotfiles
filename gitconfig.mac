@@ -21,6 +21,7 @@
     lgm = log HEAD..origin/master
     ls = ls-files
     lggo = !git log --graph --decorate --pretty=oneline --abbrev-commit $(git merge-base origin/master HEAD)..
+    mymerges = !git log --grep='Merge pull request' --author=$USER --oneline
 [diff]
     tool = vimdiff
 [push]
