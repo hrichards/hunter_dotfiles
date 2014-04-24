@@ -20,7 +20,6 @@ set nosmartindent
 set nosmarttab
 set nospell
 set number
-set numberwidth=4
 set pastetoggle=<F6>
 set scrolloff=3
 set shiftwidth=4
@@ -71,9 +70,7 @@ colorscheme solarized
 nmap <SPACE> <SPACE>:noh<CR>
 
 " filetype
-filetype on
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 
 " Set status line format
 set statusline=%F%m%r%h%w\ (%Y)\ %=\ r%l,\ c%v\ [%p%%]
@@ -209,3 +206,6 @@ if executable('coffeetags')
 endif
 
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+
+" Set default indent width to 2 for coffeescript files
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
