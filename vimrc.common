@@ -170,11 +170,6 @@ set foldmethod=syntax   "fold based on syntax highlight interp of code
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
-" Codequality Integration from DevWiki
-" ====================================
-" Relies on Jenan Wise's codequality being installed
-
-au FileType python set makeprg=codequality\ %
 " Turn off line numbering for the error buffer
 au BufReadPost quickfix setlocal nonumber
 
@@ -212,3 +207,5 @@ if executable('coffeetags')
         \ }
         \ }
 endif
+
+let g:syntastic_python_checkers = ['pyflakes', 'pep8']
