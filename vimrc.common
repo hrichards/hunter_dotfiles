@@ -119,12 +119,6 @@ au FileType tex set formatoptions+=n
 " Remove all trailing whitespace with CTRL+G
 nmap <C-g> :%s/\s\+$//g<CR>
 
-" ================ Folds ============================
-
-set foldmethod=syntax   "fold based on syntax highlight interp of code
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-
 " Turn off line numbering for the error buffer
 au BufReadPost quickfix setlocal nonumber
 
