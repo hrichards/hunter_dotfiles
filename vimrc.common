@@ -36,6 +36,7 @@ set wrap
 set incsearch
 set cursorline
 syntax enable
+filetype plugin indent on
 
 " Tagbar Options
 let g:tagbar_usearrows = 1
@@ -68,9 +69,6 @@ colorscheme solarized
 
 " Pressing space after a search will clear all highlighting
 nmap <SPACE> <SPACE>:noh<CR>
-
-" filetype
-filetype plugin indent on
 
 " Set status line format
 set statusline=%F%m%r%h%w\ (%Y)\ %=\ r%l,\ c%v\ [%p%%]
