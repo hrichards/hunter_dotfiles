@@ -122,22 +122,6 @@ nmap <C-g> :%s/\s\+$//g<CR>
 " Turn off line numbering for the error buffer
 au BufReadPost quickfix setlocal nonumber
 
-" F4: run the make program
-nmap <F4> :make<CR>
-vmap <F4> <C-o>:make<CR>
-
-" F1: close the error window
-nmap <F1> :cclose<CR>
-imap <F1> <C-o>:cclose<CR>
-
-" F2/F3: move between errors
-nmap <F2> :cprev<CR>
-nmap <F3> :cnext<CR>
-imap <F2> <C-o>:cprev<CR>
-imap <F3> <C-o>:cnext<CR>
-
-let g:Imap_UsePlaceHolders = 0
-
 
 " ====== Coffeescript Ctags support =====
 
