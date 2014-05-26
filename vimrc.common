@@ -84,16 +84,6 @@ call SetFormatOptions()
 " already loaded everything
 autocmd VimEnter * call SetFormatOptions()
 
-function! HighlightBadChars()
-    if &modifiable
-        let tabs = "\t"
-        let trailingws = "\\s\\+$"
-        let rightmargin = "\\%<" . (&textwidth + 3) . "v.\\%>" . (&textwidth + 1) . "v"
-        let b:badcharsmatch = matchadd("ErrorMsg", tabs . "\\|" . trailingws . "\\|" . rightmargin)
-    endif
-endfunc
-autocmd BufReadPost *.py call HighlightBadChars()
-
 " Diff-specific setup
 func! DiffSetup()
     " Original version
