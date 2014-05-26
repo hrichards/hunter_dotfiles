@@ -84,9 +84,6 @@ call SetFormatOptions()
 " already loaded everything
 autocmd VimEnter * call SetFormatOptions()
 
-" Nicer TODO coloring (red FG, no annoying BG color)
-highlight Todo ctermfg=1 ctermbg=None cterm=bold
-
 function! HighlightBadChars()
     if &modifiable
         let tabs = "\t"
