@@ -119,10 +119,6 @@ au FileType tex set formatoptions+=n
 " Remove all trailing whitespace with CTRL+G
 nmap <C-g> :%s/\s\+$//g<CR>
 
-" ==== SPELL CHECKING ====
-map <F5> :setlocal spell! spelllang=en_us<CR>
-imap <F5> <C-o>:setlocal spell! spelllang=en_us<CR>
-
 " ================ Folds ============================
 
 set foldmethod=syntax   "fold based on syntax highlight interp of code
