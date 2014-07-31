@@ -3,6 +3,7 @@
     email = hunter@counsyl.com
 [core]
     quotepath = false
+    editor = vim
 [color]
     ui = true
 [init]
