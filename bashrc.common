@@ -107,6 +107,7 @@ alias less='less -R'
 alias grep='grep --color=auto'
 alias tree='tree -C'
 alias lessrs='less -R -S'
+alias stringgrep='grep -srFI'
 
 # Git abbreviations
 alias gts="git status"
