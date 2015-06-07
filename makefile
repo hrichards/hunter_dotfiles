@@ -5,13 +5,13 @@ linux: common
 	ln -sf ~/hunter_dotfiles/linux.vimrc ~/.vimrc
 	ln -sf ~/hunter_dotfiles/linux.bash_profile.sh ~/.bash_profile
 	ln -sf ~/hunter_dotfiles/linux.bashrc.sh ~/.bashrc
-	ln -sf ~/hunter_dotfiles/tmux.conf.linux ~/.tmux.conf
+	ln -sf ~/hunter_dotfiles/linux.tmux.conf ~/.tmux.conf
 
 mac: common
 	ln -sf ~/hunter_dotfiles/mac.vimrc ~/.vimrc
 	ln -sf ~/hunter_dotfiles/mac.bash_profile.sh ~/.bash_profile
 	ln -sf ~/hunter_dotfiles/mac.bashrc.sh ~/.bashrc
-	ln -sf ~/hunter_dotfiles/tmux.conf.mac ~/.tmux.conf
+	ln -sf ~/hunter_dotfiles/mac.tmux.conf ~/.tmux.conf
 
 common:
 	ln -sf ~/hunter_dotfiles/gitconfig ~/.gitconfig
