@@ -114,7 +114,3 @@ alias gts="git status"
 
 # grep functions
 function gbeh() { grep "$@" ~/.bash_eternal_history ;}
-
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
