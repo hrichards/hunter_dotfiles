@@ -1,3 +1,0 @@
-source $HOME/hunter_dotfiles/bashrc.common
-
-source /usr/share/autojump/autojump.bash
