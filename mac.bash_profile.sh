@@ -4,4 +4,4 @@ fi
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-source ~/hunter_dotfiles/bash_profile.common
+source ~/hunter_dotfiles/common.bash_profile.sh

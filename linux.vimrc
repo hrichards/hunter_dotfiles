@@ -2,4 +2,4 @@
 " Must be found before "call pathogen#infect()"
 let g:pathogen_disabled = []
 
-source ~/hunter_dotfiles/vimrc.common
+source ~/hunter_dotfiles/common.vimrc
