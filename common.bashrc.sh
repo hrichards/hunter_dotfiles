@@ -107,7 +107,7 @@ alias less='less -R'
 alias grep='grep --color=auto'
 alias tree='tree -C'
 alias lessrs='less -R -S'
-alias stringgrep='grep -srFI --exclude-dir=*migrations* --exclude-dir=*watched_assets*'
+alias stringgrep='grep -srFI --exclude-dir=*watched_assets*'
 
 # Git abbreviations
 alias gts="git status"
