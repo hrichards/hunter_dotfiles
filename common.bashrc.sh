@@ -114,3 +114,5 @@ alias gts="git status"
 
 # grep functions
 function gbeh() { grep "$@" ~/.bash_eternal_history ;}
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
