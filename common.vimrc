@@ -1,8 +1,3 @@
-" Required to use the 'pathogen' vim plugin manager
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-execute pathogen#helptags()
-
 " ===== BASIC OPTIONS =====
 set autoindent
 set backspace=eol,indent,start
