@@ -114,3 +114,5 @@ alias gts="git status"
 
 # grep functions
 function gbeh() { grep "$@" ~/.bash_eternal_history ;}
+
+export PIP_INDEX_URL=https://pypi.counsyl.com/counsyl/prod
