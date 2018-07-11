@@ -4,9 +4,6 @@
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
-[submodule "vim/bundle/vim-supertab"]
-	path = vim/bundle/vim-supertab
-	url = https://github.com/tsaleh/vim-supertab.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
