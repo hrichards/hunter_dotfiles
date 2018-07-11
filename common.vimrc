@@ -61,7 +61,7 @@ let g:tagbar_type_markdown = {
             \ }
 
 " Turn on solarized colorscheme
-set background=light
+set background=dark
 colorscheme solarized
 
 " Pressing space after a search will clear all highlighting
