@@ -58,37 +58,23 @@ function parse_git_stash {
 #See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
 PS1='\[\033[00;34m\][\u@\h:\w]\[$(git_color)\]$(parse_git_branch)$(parse_git_stash)\[\033[00m\]'
 
-#
-# ---------> VERY IMPORTANT: Bash eternal history <---------
-#
-# This incredibly important snippet allows infinite recording of
-# every command you've ever entered on the machine. It works
-# without using lots of memory w/ a large HISTFILESIZE *and* keeps
-# track if you have multiple screens and ssh sessions into the
-# same machine.
-#
-# The way it works is that after each command is executed and
-# before a prompt is displayed, a line with the last command (and
-# some metadata) is written to ~/.bash_eternal_history.
-#
-# This file ia tab-delimited, timestamped file, w/ the following columns:
-#
-# 1) user
-# 2) hostname
-# 3) screen window (in case you are using GNU screen, which you should!)
-# 4) date
-# 5) current working directory (very useful to see *where* a command was run)
-# 6) the last command you executed
-#
-# The only minor bug: if you include a literal tab (e.g. with awk
-# -F"\t"), then that messes up the formatting a bit. If you have a
-# fix for that which doesn't slow the command down, please tell
-# balajis@counsyl.com
-#
-# It is adapted from: http://www.debian-administration.org/articles/543.
-# PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo -e $$\\t$USER\\t$HOSTNAME\\tscreen $WINDOW\\t`date +%D%t%T%t%Y%t%s`\\t$PWD"$(history 1)" >> ~/.bash_eternal_history'
-export HISTTIMEFORMAT="%s "
-PROMPT_COMMAND='echo $$ $USER "$(history 1)" >> ~/.bash_eternal_history'
+# Bash Eternal History.  See https://gist.github.com/rebeccacremona/88fc768fb487e80335febbfa31d6251a
+# No dupes
+export HISTCONTROL=ignoreboth:erasedups
+
+# Eternal bash history.
+# ---------------------
+# Undocumented feature which sets the size to "unlimited".
+# http://stackoverflow.com/questions/9457233/unlimited-bash-history
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="%F %T "
+# Change the file location because certain bash sessions truncate .bash_history file upon close.
+# http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
+export HISTFILE=~/.bash_eternal_history
+# Force prompt to write history after every command.
+# http://superuser.com/questions/20900/bash-history-loss
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Safety
 alias rm="rm -i"
