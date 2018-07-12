@@ -25,7 +25,7 @@ if [[ "$STATUS" == *'Not a git repository'* ]]
 then
     echo ""
 else
-    if [[ "$STATUS" != *'working directory clean'* ]]
+    if [[ "$STATUS" != *'working tree clean'* ]]
     then
         # red if need to commit
         echo -e '\033[0;31m'
