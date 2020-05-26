@@ -151,6 +151,29 @@ let g:tagbar_type_rst = {
     \ 'sort': 0,
 \ }
 
+let g:tagbar_type_markdown = {
+    \ 'ctagsbin' : 'ctags',
+\ }
+
+let g:tagbar_type_yaml = {
+    \ 'ctagstype' : 'yaml',
+    \ 'kinds' : [
+        \ 'a:anchors',
+        \ 's:section',
+        \ 'e:entry'
+    \ ],
+  \ 'sro' : '.',
+    \ 'scope2kind': {
+      \ 'section': 's',
+      \ 'entry': 'e'
+    \ },
+    \ 'kind2scope': {
+      \ 's': 'section',
+      \ 'e': 'entry'
+    \ },
+    \ 'sort' : 0
+\ }
+
 let g:syntastic_python_checkers = ['flake8']
 
 " Set default indent width to 2 for coffeescript files
@@ -159,7 +182,3 @@ autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 let g:syntastic_always_populate_loc_list = 1
 
 au FileType python set textwidth=99
-
-let g:tagbar_type_markdown = {
-    \ 'ctagsbin' : 'ctags',
-    \ }

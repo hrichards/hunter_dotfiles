@@ -1,3 +1,4 @@
+--langdef=yaml
 --langmap=yaml:.yml.yaml
 --kinddef-yaml=s,section,sections
 --kinddef-yaml=e,entry,entries
