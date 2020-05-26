@@ -136,6 +136,21 @@ if executable('coffeetags')
         \ }
 endif
 
+let g:tagbar_type_rst = {
+    \ 'ctagstype': 'rst',
+    \ 'ctagsbin' : 'rst2ctags',
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+\ }
+
 let g:syntastic_python_checkers = ['flake8']
 
 " Set default indent width to 2 for coffeescript files
@@ -144,3 +159,7 @@ autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 let g:syntastic_always_populate_loc_list = 1
 
 au FileType python set textwidth=99
+
+let g:tagbar_type_markdown = {
+    \ 'ctagsbin' : 'ctags',
+    \ }
