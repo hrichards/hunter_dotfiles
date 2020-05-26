@@ -104,3 +104,7 @@ alias gts="git status"
 function gbeh() { grep "$@" ~/.bash_eternal_history ;}
 
 export PIP_INDEX_URL=https://pypi.counsyl.com/counsyl/prod
+
+# To allow version of Ruby installed using `rbenv` to be available in new
+# terminals.  Required for non-Docker Website install.
+eval "$(rbenv init -)"
