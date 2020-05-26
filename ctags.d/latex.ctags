@@ -20,9 +20,3 @@
 --regex-latex=/\\label[[:space:]]*\{([^}]+)\}/\1/l,label/
 --regex-latex=/\\ref[[:space:]]*\{([^}]+)\}/\1/r,ref/
 --regex-latex=/\\pageref[[:space:]]*\{([^}]+)\}/\1/p,pageref/
-
---langmap=yaml:.yml.yaml
---kinddef-yaml=s,section,sections
---kinddef-yaml=e,entry,entries
---regex-yaml=/^([a-zA-Z0-9_\/-]+):/\1/s/{scope=set}
---regex-yaml=/^ *- (name: .*)$/\1/e/{scope=ref}

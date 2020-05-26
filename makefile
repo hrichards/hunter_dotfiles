@@ -16,7 +16,7 @@ mac: common
 common:
 	ln -sf ~/hunter_dotfiles/gitconfig ~/.gitconfig
 	ln -sf ~/hunter_dotfiles/git_template ~/.git_template
-	ln -sf ~/hunter_dotfiles/ctags ~/.ctags
+	ln -sf ~/hunter_dotfiles/ctags.d ~/.ctags.d
 	rm -rf ~/.vim
 	ln -sf ~/hunter_dotfiles/vim ~/.vim
 	git submodule init && git submodule update
