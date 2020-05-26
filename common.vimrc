@@ -142,3 +142,5 @@ let g:syntastic_python_checkers = ['flake8']
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 
 let g:syntastic_always_populate_loc_list = 1
+
+au FileType python set textwidth=99
