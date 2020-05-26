@@ -20,17 +20,20 @@
     lgga = log --graph --decorate --pretty=oneline --abbrev-commit --all
     lgc = log origin/master..HEAD
     lgm = log HEAD..origin/master
-    ls = ls-files
     lggo = !git log --graph --decorate --pretty=oneline --abbrev-commit $(git merge-base origin/master HEAD)..
     mymerges = !git log --grep='Merge pull request' --author=$USER --oneline
+    merged = branch --merged
 [diff]
     tool = vimdiff
+    algorithm = patience
+    indentHeuristic = on
 [push]
 	default = upstream
 
 [core]
   packedGitLimit = 128m
   packedGitWindowSize = 128m
+	excludesfile = /Users/hunter/.gitignore
 
 [pack]
   deltaCacheSize = 128m
