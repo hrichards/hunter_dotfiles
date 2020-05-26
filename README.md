@@ -1,6 +1,16 @@
 # Installation
 
-1.  Clone repo through HTTP, which disallows pushing: `git clone https://github.com/hrichards/hunter_dotfiles.git`
+1.  Install the following packages:
+    -   `pyenv` 
+    -   Universal `ctags`
+2.  Install the following Python packages:
+    -   `black==19.10b0`
+    -   `flake8==3.7.7`
+    -   `flake8-black==0.1.1`
+    -   `flake8-import-order==0.18.1`
+    -   `flake8-tidy-imports==2.0.0`
+    -   `rst2ctags==0.2.4`
+1.  `git clone https://github.com/hrichards/hunter_dotfiles.git`
 2.  `cd hunter_dotfiles`
 3.  `make linux` or `make mac`: you must choose which system you're running on
 4.  Restart `tmux` or `Terminal`
@@ -8,17 +18,14 @@
 
 # Recommended Technologies
 
--   **homebrew** to install everything you may be missing from.
--   Jenan Wise's **Codequality**
--   **iTerm2** as a replacement for `Terminal`, not least because it works best with...
--   ...**solarized** (http://ethanschoonover.com/solarized): the sane terminal color scheme
--   **vim**
--   **LaTeX**
--   **Markdown**
--   **bash**
--   **tmux**
--   **git**
--   **python**
+-   Homebrew
+-   Vim
+-   LaTeX
+-   Markdown
+-   ZSH
+-   Tmux
+-   Git
+-   Python
 
 
 # Getting Started
@@ -46,4 +53,3 @@ Here's a quick tour of the features available in these dotfiles:
     -   LaTeX
 10. Tab-completion is now available in `vim`, courtesy of `Tagbar`
 11. And much more!
-
