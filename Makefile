@@ -12,6 +12,7 @@ mac: common
 	ln -sf ~/hunter_dotfiles/mac.tmux.conf ~/.tmux.conf
 
 common: clean
+	ln -sf ~/hunter_dotfiles/oh-my-zsh-custom ~/.oh-my-zsh-custom
 	ln -sf ~/hunter_dotfiles/vimrc ~/.vimrc
 	ln -sf ~/hunter_dotfiles/gitconfig ~/.gitconfig
 	ln -sf ~/hunter_dotfiles/git_template ~/.git_template
@@ -30,3 +31,4 @@ clean:
 	rm -rf ~/.ctags.d
 	rm -rf ~/.vim
 	rm -rf ~/.zshrc
+	rm -rf ~/.oh-my-zsh-custom
