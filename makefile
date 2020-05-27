@@ -18,6 +18,7 @@ common: clean
 	ln -sf ~/hunter_dotfiles/git_template ~/.git_template
 	ln -sf ~/hunter_dotfiles/ctags.d ~/.ctags.d
 	ln -sf ~/hunter_dotfiles/vim ~/.vim
+	ln -sf ~/hunter_dotfiles/zshrc ~/.zshrc
 	git submodule init && git submodule update
 
 clean:
@@ -29,3 +30,4 @@ clean:
 	rm -rf ~/.git_template
 	rm -rf ~/.ctags.d
 	rm -rf ~/.vim
+	rm -rf ~/.zshrc
