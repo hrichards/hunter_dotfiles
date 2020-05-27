@@ -100,10 +100,6 @@ if executable('rst2ctags')
   \ }
 endif
 
-let g:tagbar_type_markdown = {
-    \ 'ctagsbin' : 'ctags',
-\ }
-
 let g:tagbar_type_yaml = {
     \ 'ctagstype' : 'yaml',
     \ 'kinds' : [
