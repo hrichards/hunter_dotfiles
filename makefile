@@ -1,5 +1,5 @@
 all:
-	# There is no default build: you must choose which system to build for.
+	echo "There is no default build: you must choose which system to build for."
 
 linux: common
 	ln -sf ~/hunter_dotfiles/linux.vimrc ~/.vimrc
@@ -13,10 +13,19 @@ mac: common
 	ln -sf ~/hunter_dotfiles/mac.bashrc.sh ~/.bashrc
 	ln -sf ~/hunter_dotfiles/mac.tmux.conf ~/.tmux.conf
 
-common:
+common: clean
 	ln -sf ~/hunter_dotfiles/gitconfig ~/.gitconfig
 	ln -sf ~/hunter_dotfiles/git_template ~/.git_template
 	ln -sf ~/hunter_dotfiles/ctags.d ~/.ctags.d
-	rm -rf ~/.vim
 	ln -sf ~/hunter_dotfiles/vim ~/.vim
 	git submodule init && git submodule update
+
+clean:
+	rm -rf ~/.vimrc
+	rm -rf ~/.bash_profile
+	rm -rf ~/.bashrc
+	rm -rf ~/.tmux.conf
+	rm -rf ~/.gitconfig
+	rm -rf ~/.git_template
+	rm -rf ~/.ctags.d
+	rm -rf ~/.vim
