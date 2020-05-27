@@ -39,3 +39,5 @@
   deltaCacheSize = 128m
   packSizeLimit = 128m
   windowMemory = 128m
+[fetch]
+	prune = true
