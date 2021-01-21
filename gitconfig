@@ -19,6 +19,7 @@
 	tool = vimdiff
 	algorithm = patience
 	indentHeuristic = on
+	compactionHeuristic = true
 [push]
 	default = upstream
 
@@ -33,3 +34,5 @@
 	windowMemory = 128m
 [fetch]
 	prune = true
+[pull]
+	ff = only

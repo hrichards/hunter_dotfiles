@@ -5,7 +5,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
 
-export PYTHONPATH=$HOME/docker_website/counsyl/product:$PYTHONPATH
+export PYTHONPATH=$HOME/git/website/counsyl/product:$PYTHONPATH
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 

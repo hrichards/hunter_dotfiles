@@ -61,6 +61,11 @@ ZSH_THEME="agnoster"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+HISTSIZE=10000000
+SAVEHIST=10000000
+setopt HIST_IGNORE_ALL_DUPS # ignore duplicated commands history list
+
+
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 
@@ -71,9 +76,11 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    colored-man-pages
     git
-    osx
-    autojump
+    pyenv
+    python
+    z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,7 +111,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PYTHONPATH=$HOME/docker_website/
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+alias f="fortune"
+
+# Allows correct autocompletion and loading our custom MWH501 line length rule.
+export PYTHONPATH=$HOME/git/website/
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
