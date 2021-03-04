@@ -1,4 +1,4 @@
-source $HOME/hunter_dotfiles/common.bashrc.sh
+source ~/.common.bashrc.sh
 
 if command -v "autojump" &> /dev/null
 then

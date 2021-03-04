@@ -1,1 +1,1 @@
-source ~/hunter_dotfiles/common.bash_profile.sh
+source ~/.common.bash_profile.sh

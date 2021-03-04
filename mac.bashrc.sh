@@ -10,4 +10,4 @@ alias vim='vim -w ~/.vimlog "$@"'
 
 eval "$(pyenv init -)"
 
-source $HOME/hunter_dotfiles/common.bashrc.sh
+source ~/.common.bashrc.sh

@@ -12,6 +12,14 @@ mac: common
 	ln -sf `pwd`/mac.tmux.conf ~/.tmux.conf
 
 common: clean
+	# These `common` links are needed here so that the "inheritance" system of
+	# these config files works no matter where `hunter_dotfiles` is cloned: the
+	# common files will be cloned into $HOME with a dot in front of them so
+	# that a reference to `~/.common_file` can be used in the platform-specific
+	# files without cluttering up the home directory needlessly.
+	ln -sf `pwd`/common.bash_profile.sh ~/.common.bash_profile.sh
+	ln -sf `pwd`/common.bashrc.sh ~/.common.bashrc.sh
+	ln -sf `pwd`/common.tmux.conf ~/.common.tmux.conf
 	ln -sf `pwd`/oh-my-zsh-custom ~/.oh-my-zsh-custom
 	ln -sf `pwd`/vimrc ~/.vimrc
 	ln -sf `pwd`/gitconfig ~/.gitconfig
