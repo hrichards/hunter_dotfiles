@@ -2,23 +2,23 @@ all:
 	echo "There is no default build: you must choose which system to build for."
 
 linux: common
-	ln -sf ~/hunter_dotfiles/linux.bash_profile.sh ~/.bash_profile
-	ln -sf ~/hunter_dotfiles/linux.bashrc.sh ~/.bashrc
-	ln -sf ~/hunter_dotfiles/linux.tmux.conf ~/.tmux.conf
+	ln -sf `pwd`/linux.bash_profile.sh ~/.bash_profile
+	ln -sf `pwd`/linux.bashrc.sh ~/.bashrc
+	ln -sf `pwd`/linux.tmux.conf ~/.tmux.conf
 
 mac: common
-	ln -sf ~/hunter_dotfiles/mac.bash_profile.sh ~/.bash_profile
-	ln -sf ~/hunter_dotfiles/mac.bashrc.sh ~/.bashrc
-	ln -sf ~/hunter_dotfiles/mac.tmux.conf ~/.tmux.conf
+	ln -sf `pwd`/mac.bash_profile.sh ~/.bash_profile
+	ln -sf `pwd`/mac.bashrc.sh ~/.bashrc
+	ln -sf `pwd`/mac.tmux.conf ~/.tmux.conf
 
 common: clean
-	ln -sf ~/hunter_dotfiles/oh-my-zsh-custom ~/.oh-my-zsh-custom
-	ln -sf ~/hunter_dotfiles/vimrc ~/.vimrc
-	ln -sf ~/hunter_dotfiles/gitconfig ~/.gitconfig
-	ln -sf ~/hunter_dotfiles/git_template ~/.git_template
-	ln -sf ~/hunter_dotfiles/ctags.d ~/.ctags.d
-	ln -sf ~/hunter_dotfiles/vim ~/.vim
-	ln -sf ~/hunter_dotfiles/zshrc ~/.zshrc
+	ln -sf `pwd`/oh-my-zsh-custom ~/.oh-my-zsh-custom
+	ln -sf `pwd`/vimrc ~/.vimrc
+	ln -sf `pwd`/gitconfig ~/.gitconfig
+	ln -sf `pwd`/git_template ~/.git_template
+	ln -sf `pwd`/ctags.d ~/.ctags.d
+	ln -sf `pwd`/vim ~/.vim
+	ln -sf `pwd`/zshrc ~/.zshrc
 	git submodule init && git submodule update
 
 clean:
