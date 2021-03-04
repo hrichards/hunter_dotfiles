@@ -1,6 +1,9 @@
 source $HOME/hunter_dotfiles/common.bashrc.sh
 
-source /usr/share/autojump/autojump.bash
+if command -v "autojump" &> /dev/null
+then
+    source /usr/share/autojump/autojump.bash
+fi
 
 export NVM_DIR="/home/hunter/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

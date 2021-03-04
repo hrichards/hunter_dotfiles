@@ -7,8 +7,6 @@ export PATH=$HOME/bin:$PATH
 
 export PYTHONPATH=$HOME/git/website/counsyl/product:$PYTHONPATH
 
-export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
-
 # Git status color from:
 # http://amatsukawa.com/git-branch-command-line.html
 parse_git_branch ()
@@ -95,16 +93,10 @@ alias less='less -R'
 alias grep='grep --color=auto'
 alias tree='tree -C'
 alias lessrs='less -R -S'
-alias stringgrep='grep -srFI --exclude-dir=*watched_assets*'
+alias stringgrep='grep -srFI'
 
 # Git abbreviations
 alias gts="git status"
 
 # grep functions
 function gbeh() { grep "$@" ~/.bash_eternal_history ;}
-
-export PIP_INDEX_URL=https://pypi.counsyl.com/counsyl/prod
-
-# To allow version of Ruby installed using `rbenv` to be available in new
-# terminals.  Required for non-Docker Website install.
-eval "$(rbenv init -)"
