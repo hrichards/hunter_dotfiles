@@ -34,6 +34,8 @@ syntax enable
 filetype plugin indent on
 set background=dark
 colorscheme solarized
+set formatoptions-=t
+au FileType python set textwidth=99
 
 " # Shortcuts
 " Remove all trailing whitespace with CTRL+G
