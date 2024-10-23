@@ -113,5 +113,3 @@ source $ZSH/oh-my-zsh.sh
 
 alias f="fortune"
 
-# Allows correct autocompletion and loading our custom MWH501 line length rule.
-export PYTHONPATH=$HOME/git/website/
