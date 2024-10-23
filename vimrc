@@ -16,6 +16,7 @@ set nosmarttab
 set nospell
 set number
 set pastetoggle=<F6>
+set ruler
 set scrolloff=3
 set shiftwidth=4
 set shortmess=a
@@ -30,6 +31,7 @@ set wildmode=longest:full,list:full
 set wrap
 set incsearch
 set cursorline
+set nofixendofline
 syntax enable
 filetype plugin indent on
 set background=dark
@@ -51,3 +53,25 @@ let g:syntastic_always_populate_loc_list = 1
 " Tagbar config
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
+
+let g:tagbar_type_yaml = {
+    \ 'ctagstype' : 'yaml',
+    \ 'kinds' : [
+        \ 'a:anchors',
+        \ 's:section',
+        \ 'e:entry'
+    \ ],
+  \ 'sro' : '.',
+    \ 'scope2kind': {
+      \ 'section': 's',
+      \ 'entry': 'e'
+    \ },
+    \ 'kind2scope': {
+      \ 's': 'section',
+      \ 'e': 'entry'
+    \ },
+    \ 'sort' : 0
+    \ }
+
+" Use new regular expression engine for more efficient syntax highlighting.
+set re=0
