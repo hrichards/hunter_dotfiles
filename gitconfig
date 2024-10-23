@@ -11,7 +11,7 @@
 [alias]
 	lgc = log origin/master..HEAD
 	lgg = log --graph --decorate --pretty=oneline --abbrev-commit
-	lggo = !git log --graph --decorate --pretty=oneline --abbrev-commit $(git merge-base origin/master HEAD)..
+	lggo = !git log --graph --decorate --pretty=oneline --abbrev-commit $(git merge-base origin/master HEAD || git merge-base origin/main HEAD)..
 	lgm = log HEAD..origin/master
 	merged = branch --merged
 	mymerges = !git log --grep='Merge pull request' --author=$USER --oneline
